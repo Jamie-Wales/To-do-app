@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
             let removeButton = document.createElement("button");
             newEl.appendChild(doneButton);
             newEl.appendChild(removeButton);
-            doneButton.classList.add('removeButton');
-            removeButton.classList.add('doneButton');
+            doneButton.classList.add('removeButton', 'trash-icon');
+            removeButton.classList.add('doneButton', 'tick-icon');
         }
       
     }
@@ -49,11 +49,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
   
-
-
-    
-       
-
-    
-
 })
