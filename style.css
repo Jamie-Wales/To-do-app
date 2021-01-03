@@ -13,6 +13,7 @@
 }
 
 .li {
+  padding-left: 2rem;
 }
 
 .element {
@@ -47,4 +48,8 @@ button {
   display: inline-block;
   float: right;
   padding: 1.15rem;
+}
+
+.complete {
+  background-color: green !important;
 }

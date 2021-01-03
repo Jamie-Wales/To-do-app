@@ -1,10 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     var button = document.getElementById("submit");
     var inputArray = [];
-    
+    var todoList = document.getElementById('to-do-list');
+    button.addEventListener("click", addToList);
+    todoList.addEventListener("click", deletecheck);
+
     
    
-    button.addEventListener("click", (e) => {
+    
+    
+    function addToList(){
         var input = document.getElementById("to-do-sub").value;
         if (input.length == 0){
             alert('Please enter valid input')
@@ -20,19 +25,31 @@ document.addEventListener("DOMContentLoaded", () => {
             let removeButton = document.createElement("button");
             newEl.appendChild(doneButton);
             newEl.appendChild(removeButton);
-            doneButton.classList.add('doneButton');
-            removeButton.classList.add('removeButton');
+            doneButton.classList.add('removeButton');
+            removeButton.classList.add('doneButton');
         }
-        
-    
-       
-        
-        
-        
-        
-        
       
-    })
+    }
+
+    
+
+    function deletecheck(e) {
+        const item = e.target;
+        if(item.classList[0] === 'removeButton')
+        {
+            const todo = item.parentElement;
+            todo.remove();
+        }
+
+        if (item.classList[0] === 'doneButton')
+        {
+            const todo = item.parentElement;
+            todo.classList.toggle('complete');
+            }
+
+    }
+  
+
 
     
        
