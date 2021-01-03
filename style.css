@@ -42,11 +42,11 @@ button {
 }
 
 .tick-icon {
-  mask: url("/imgs/check-circle-solid.svg");
+  mask: url("./imgs/check-circle-solid.svg");
 }
 
 .trash-icon {
-  mask: url("/imgs/times-circle-solid.svg");
+  mask: url("./imgs/times-circle-solid.svg");
 }
 
 .doneButton {
